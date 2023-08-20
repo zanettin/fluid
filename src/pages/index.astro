@@ -1,0 +1,204 @@
+---
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <style>
+    :root {
+      --max-container-width: 1200px;
+      --gap: 1rem;
+      --hpa-width: 155px;
+      --left-column-width: 300px;
+    }
+    body {
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    header,
+    footer {
+      background-color: #2b2d42;
+      color: white;
+    }
+    #page {
+      display: flex;
+      flex-direction: row;
+      gap: var(--gap);
+      margin: calc(var(--gap) * 5) calc(var(--gap)) 0 calc(var(--gap));
+      max-width: calc(
+        var(--max-container-width) + var(--gap) + var(--hpa-width)
+      );
+      box-sizing: content-box;
+    }
+    #app {
+      background-color: #fff;
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      gap: var(--gap);
+      padding: var(--gap);
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+    }
+    #hpa-wrapper {
+      position: relative;
+    }
+    .hpa {
+      box-sizing: content-box;
+      display: none;
+      position: absolute;
+    }
+    .hpa.hpa-300 {
+      background-color: #ff66d8;
+      width: 300px;
+      z-index: 1000;
+      text-align: left;
+    }
+    .hpa.hpa-600 {
+      background-color: #a5418c;
+      width: 600px;
+      text-align: right;
+    }
+    .section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+    }
+    .content {
+      background-color: #f7ec59;
+      flex-grow: 1;
+    }
+    .right {
+      background-color: #92dce5;
+      box-sizing: content-box;
+    }
+    .box-rounded {
+      border-radius: 8px;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media screen and (min-width: 800px) {
+      #page {
+        margin-left: calc(var(--gap) * 3);
+        margin-right: calc(var(--gap) * 3);
+      }
+    }
+
+    /* right COLUMN VISIBLE */
+    @media screen and (min-width: 1024px) {
+      .section {
+        flex-direction: row;
+      }
+
+      .right {
+        width: var(--left-column-width);
+      }
+    }
+
+    /* HPA VISIBLE */
+    @media screen and (min-width: 1200px) {
+      #page {
+        margin-left: calc(var(--gap) * 1.5);
+        margin-right: 0;
+      }
+
+      .hpa {
+        display: block;
+      }
+    }
+
+    /* LET THE SPACE FOR THE HPA GROW */
+    @media screen and (min-width: 1280px) {
+      #app {
+        max-width: 1024px;
+      }
+    }
+
+    /* 100% OF HPA IS VISIBLE - LET THE CONTAINER GROW AGAIN */
+    @media screen and (min-width: 1440px) {
+      #app {
+        max-width: var(--max-container-width);
+      }
+    }
+
+    /* MAX APP WIDTH */
+    @media screen and (min-width: 1680px) {
+      #page {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  </style>
+  <body>
+    <div id="page">
+      <div id="app">
+        <header class="box-rounded">header</header>
+        <main>
+          <div class="section">
+            <div class="content box-rounded">content</div>
+            <div class="right box-rounded">right</div>
+          </div>
+
+          <div class="section">
+            <div class="content box-rounded">content</div>
+            <div class="right box-rounded">right</div>
+          </div>
+
+          <div class="section">
+            <div class="content box-rounded">content</div>
+            <div class="right box-rounded">right</div>
+          </div>
+
+          <div class="section">
+            <div class="content box-rounded">content</div>
+          </div>
+
+          <div class="section">
+            <div class="content box-rounded">content</div>
+            <div class="right box-rounded">right</div>
+          </div>
+
+          <div class="section">
+            <div class="content box-rounded">content</div>
+            <div class="right box-rounded">right</div>
+          </div>
+
+          <div class="section">
+            <div class="content box-rounded">content</div>
+            <div class="right box-rounded">right</div>
+          </div>
+
+          <div class="section">
+            <div class="content box-rounded">content</div>
+          </div>
+
+          <div class="section">
+            <div class="content box-rounded">content</div>
+            <div class="right box-rounded">right</div>
+          </div>
+
+          <div class="section">
+            <div class="content box-rounded">content</div>
+            <div class="right box-rounded">right</div>
+          </div>
+        </main>
+        <footer class="box-rounded">footer</footer>
+      </div>
+      <div id="hpa-wrapper">
+        <div class="hpa hpa-300 box-rounded">HPA 300</div>
+        <div class="hpa hpa-600 box-rounded">HPA 600</div>
+      </div>
+    </div>
+  </body>
+</html>
