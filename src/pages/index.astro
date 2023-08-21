@@ -28,9 +28,6 @@
       color: white;
     }
     #page {
-      display: flex;
-      flex-direction: row;
-      gap: var(--gap);
       margin: calc(var(--gap) * 5) calc(var(--gap)) 0 calc(var(--gap));
       max-width: calc(
         var(--max-container-width) + var(--gap) + var(--hpa-width)
@@ -89,10 +86,10 @@
     }
 
     @media screen and (min-width: 800px) {
-      #page {
+      /* #page {
         margin-left: calc(var(--gap) * 3);
         margin-right: calc(var(--gap) * 3);
-      }
+      } */
     }
 
     /* right COLUMN VISIBLE */
@@ -109,6 +106,9 @@
     /* HPA VISIBLE */
     @media screen and (min-width: 1200px) {
       #page {
+        display: flex;
+        flex-direction: row;
+        gap: var(--gap);
         margin-left: calc(var(--gap) * 1.5);
         margin-right: 0;
       }
