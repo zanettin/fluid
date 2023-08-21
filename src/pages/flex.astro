@@ -12,7 +12,7 @@
   </head>
   <style>
     :root {
-      --max-container-width: 1200px;
+      --max-container-width: 990px;
       --gap: 1rem;
       --hpa-width: 155px;
       --left-column-width: 300px;
@@ -29,10 +29,7 @@
       color: white;
     }
     #page {
-      margin: calc(var(--gap) * 5) calc(var(--gap)) 0 calc(var(--gap));
-      max-width: calc(
-        var(--max-container-width) + var(--gap) + var(--hpa-width)
-      );
+      margin: calc(var(--gap) * 5) 0 0 0;
       box-sizing: content-box;
     }
     #app {
@@ -92,13 +89,6 @@
       padding: 1rem;
     }
 
-    @media screen and (min-width: 800px) {
-      /* #page {
-        margin-left: calc(var(--gap) * 3);
-        margin-right: calc(var(--gap) * 3);
-      } */
-    }
-
     /* right COLUMN VISIBLE */
     @media screen and (min-width: 1024px) {
       .section {
@@ -111,31 +101,22 @@
     }
 
     /* HPA VISIBLE */
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1370px) {
       #page {
         display: flex;
         flex-direction: row;
         gap: var(--gap);
-        margin-left: calc(var(--gap) * 1.5);
-        margin-right: 0;
+        padding-left: var(--gap);
+        padding-right: calc(var(--hpa-width) + var(--gap));
+        margin-left: auto;
+        margin-right: auto;
+        max-width: calc(
+          var(--max-container-width) + var(--gap) + var(--hpa-width)
+        );
       }
 
       .hpa {
         display: block;
-      }
-    }
-
-    /* LET THE SPACE FOR THE HPA GROW */
-    @media screen and (min-width: 1280px) {
-      #app {
-        max-width: 1024px;
-      }
-    }
-
-    /* 100% OF HPA IS VISIBLE - LET THE CONTAINER GROW AGAIN */
-    @media screen and (min-width: 1440px) {
-      #app {
-        max-width: var(--max-container-width);
       }
     }
 
