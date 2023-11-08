@@ -1,4 +1,8 @@
 ---
+/**
+ * right column 300px at 1130px viewport width!!!!
+ * used already 8 instead of 7 cols
+ */
 ---
 
 <!DOCTYPE html>
@@ -11,11 +15,21 @@
 
     </style>
   </head>
-  <body class="bg-slate-100 m-0 p-0 font-sans text-xs text-center">
-    <div class="">
-      <!-- <div class="lg:max-w-[964px] 2xl:max-w-[1272px]"> -->
+  <body class="m-0 p-0 font-sans text-xs text-center">
+    <!---
+      do not show the ad overlay since we crop it by purpose
+    -->
+    <div class="mx-auto bg-slate-200 overflow-x-hidden lg:flex">
+      <!-- MAIN CONTENT -->
+      <!-- 
+        main is full width till LG viewport. then we leave space for 50% (150px) 
+        of the HPA ad + 16px spacing to the main container.
+       -->
+      <main class="lg:w-[calc(100vw-166px)] max-w-[976px]">
+
+        <!-- GRID -->
         <h1>grid view</h1>
-        <div class="grid grid-cols-24 gap-1.5 px-[19px] bg-white mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+        <div class="grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
           <div class="bg-yellow-200 rounded-md text-[2px] h-12">1</div>
           <div class="bg-yellow-200 rounded-md text-[2px] h-12">2</div>
           <div class="bg-yellow-200 rounded-md text-[2px] h-12">3</div>
@@ -42,43 +56,170 @@
           <div class="bg-yellow-200 rounded-md text-[2px] h-12">24</div>
         </div>
 
+        <!-- RIGHT COLUMN -->
         <h2>right column</h2>
-        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-white mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
           <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
           <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
         </div>
-        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-white mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
           <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
           <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
         </div>
-        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-white mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
           <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
           <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
         </div>
-        <div class="px-[19px] bg-white mx-auto md:px-7 lg:px-4 2xl:px-[132px]">
+        <div class="px-[19px] bg-yellow-50 mx-auto md:px-7 lg:px-4 2xl:px-[132px]">
           <div class="bg-yellow-200 rounded-md text-[2px] h-12">1</div>
         </div>
-        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-white mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
           <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
           <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
         </div>
 
+        <!-- OFFSET COLUMNS -->
         <h2>offset columns</h2>
-        <div class="lg:grid lg:grid-cols-24 gap-1.5 px-[19px] bg-white mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+        <div class="lg:grid lg:grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
           <div class="bg-yellow-200 rounded-md col-start-3 col-span-4 text-[2px] h-12">1</div>
           <div class="bg-blue-200 rounded-md col-start-11 col-span-4 text-[2px] h-12">1</div>
           <div class="bg-pink-200 rounded-md col-end-23 col-span-4 text-[2px] h-12">2</div>
         </div>
-        <div class="lg:grid lg:grid-cols-24 gap-1.5 px-[19px] bg-white mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+        <div class="lg:grid lg:grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
           <div class="bg-purple-200 rounded-md col-start-2 col-span-22 text-[2px] h-12">1</div>
         </div>
-        <div class="lg:grid lg:grid-cols-24 gap-1.5 px-[19px] bg-white mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+        <div class="lg:grid lg:grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
           <div class="bg-lime-200 rounded-md col-start-7 col-span-12 text-[2px] h-12">1</div>
         </div>
+
+        <!-- FILLER -->
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+        <div class="px-[19px] bg-yellow-50 mx-auto md:px-7 lg:px-4 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md text-[2px] h-12">1</div>
+        </div>
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+        <div class="px-[19px] bg-yellow-50 mx-auto md:px-7 lg:px-4 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md text-[2px] h-12">1</div>
+        </div>
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+        <div class="px-[19px] bg-yellow-50 mx-auto md:px-7 lg:px-4 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md text-[2px] h-12">1</div>
+        </div>
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+        <div class="px-[19px] bg-yellow-50 mx-auto md:px-7 lg:px-4 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md text-[2px] h-12">1</div>
+        </div>
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+        <div class="px-[19px] bg-yellow-50 mx-auto md:px-7 lg:px-4 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md text-[2px] h-12">1</div>
+        </div>
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+        <div class="px-[19px] bg-yellow-50 mx-auto md:px-7 lg:px-4 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md text-[2px] h-12">1</div>
+        </div>
+        <div class="lg:grid grid-cols-24 gap-1.5 px-[19px] bg-yellow-50 mx-auto md:gap-5 md:px-7 lg:gap-4 lg:px-4 2xl:gap-6 2xl:px-[132px]">
+          <div class="bg-yellow-200 rounded-md lg:col-span-16 text-[2px] h-12">1</div>
+          <div class="bg-blue-400 rounded-md lg:col-span-8 text-[2px] h-12">2</div>
+        </div>
+      </main>
+
+      <!-- AD -->
+      <!-- 
+        w-150px = we need to show at least 150px of the ad
+        it is hidden on mobile
+        the ad itself is wider than 150px and gets fully visible after the main content reached max-width
+       -->
+      <div class="w-[150px] hidden lg:block ml-4">
+        <div class="bg-rose-800 h-[600px] w-[300px] rounded-md ">
+          AD
+        </div>
       </div>
-      <!-- <div class="bg-rose-800 w-[150px] h-[600px] rounded-md hidden lg:block">
-        AD
-      </div> -->
-    <!-- </div> -->
+    </div>
   </body>
 </html>
