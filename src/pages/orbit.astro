@@ -17,9 +17,10 @@
   </head>
   <body class="m-0 p-0 font-sans text-xs text-center">
     <!---
-      do not show the ad overlay since we crop it by purpose
+      do not show the ad overlay since we crop it by purpose.
+      after 1300px we center the page. at that state a 600px wide ad is fully visible.
     -->
-    <div class="mx-auto bg-slate-200 overflow-x-hidden lg:flex">
+    <div class="bg-slate-200 overflow-x-hidden lg:flex min-[1300px]:justify-center">
       <!-- MAIN CONTENT -->
       <!-- 
         main is full width till LG viewport. then we leave space for 50% (150px) 
@@ -215,7 +216,7 @@
         it is hidden on mobile
         the ad itself is wider than 150px and gets fully visible after the main content reached max-width
        -->
-      <div class="w-[150px] hidden lg:block ml-4">
+      <div class=" ml-4 hidden w-[150px] lg:block min-[1300px]:w-[300px]">
         <div class="bg-rose-800 h-[600px] w-[300px] rounded-md ">
           AD
         </div>
