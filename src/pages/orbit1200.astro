@@ -20,13 +20,13 @@
       do not show the ad overlay since we crop it by purpose.
       after 1300px we center the page. at that state a 600px wide ad is fully visible.
     -->
-    <div class="bg-sky-50 overflow-x-hidden min-[1200px]:flex min-[1280px]:justify-center">
+    <div class="bg-sky-50 overflow-x-hidden min-[1200px]:flex min-[1310px]:justify-center">
       <!-- MAIN CONTENT -->
       <!-- 
         main is full width till LG viewport. then we leave space for 50% (150px) 
         of the HPA ad + 16px spacing to the main container.
        -->
-      <main class="px-[19px] box-content md:px-7 lg:px-4 2xl:px-6 min-[1200px]:w-[calc(100vw-166px)] min-[1200px]:max-w-[1034px] min-[1280px]:max-w-[1272px]">
+      <main class="px-[19px] box-content md:px-7 lg:px-4 2xl:px-6 min-[1200px]:w-[calc(100vw-166px)] min-[1200px]:max-w-[1002px] min-[1310px]:w-[calc(100vw-316px)] min-[1310px]:max-w-[1272px]">
 
         <!-- GRID -->
         <div class="grid grid-cols-24 gap-1.5 md:gap-5 lg:gap-4 2xl:gap-6">
@@ -160,7 +160,7 @@
         it is hidden on mobile
         the ad itself is wider than 150px and gets fully visible after the main content reached max-width
        -->
-      <div class="hidden w-[150px] min-[1200px]:block min-[1280px]:w-[300px] min-[1200px]:ml-4">
+      <div class="hidden w-[150px] min-[1200px]:block min-[1310px]:w-[300px] min-[1200px]:ml-4">
         <div class="bg-fuchsia-400 h-[600px] w-[300px] rounded-md">
           AD<div class="text-[10px] text-slate-800">(300x600)</div>
         </div>
