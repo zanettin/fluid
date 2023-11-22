@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="mx-auto p-4 min-[1200px]:flex min-[1340px]:justify-center gap-4">
+    <div
+      class=" flex flex-col gap-4 min-[1200px]:w-[calc(100vw-166px)] min-[1200px]:max-w-[994px] min-[1340px]:w-[calc(100vw-316px)] min-[1340px]:max-w-[1272px]">
+      <!-- CONTENT -->
+      <!-- We have two cases here, 2 column and 1 column, so let's just go with that -->
+
+      <!-- Two columns / 3 teaser block -->
+      <div class="grid w-full grid-cols-1 lg:grid-cols-[1fr,300px] gap-4">
+
+        <!-- 3 Teaser -->
+        <div class="grid grid-cols-3 gap-4">
+          <div class="bg-sky-300 aspect-[3/4]">TEASER</div>
+          <div class="bg-sky-300 aspect-[3/4]">TEASER</div>
+          <div class="bg-sky-300 aspect-[3/4]">TEASER</div>
+        </div>
+
+        <!-- Ad Rectangle -->
+        <div class="flex place-content-center">
+          <div class="bg-fuchsia-400 h-[250px] w-[300px] flex place-content-center items-center text-center">
+            <span class="center">
+              AD<br />
+              <span class="text-xs">(300*250)</span>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Two columns / 2 teaser block -->
+      <div class="grid w-full grid-cols-1 lg:grid-cols-[1fr,300px] gap-4">
+
+        <!-- 4 Teaser -->
+        <div class="grid grid-cols-2 gap-4 place-content-start">
+          <div class="bg-sky-300 aspect-[4/3]">TEASER</div>
+          <div class="bg-sky-300 aspect-[4/3]">TEASER</div>
+          <div class="bg-sky-300 aspect-[4/3]">TEASER</div>
+          <div class="bg-sky-300 aspect-[4/3]">TEASER</div>
+        </div>
+
+        <!-- Something else. Note that we also can use flex if we don't need a grid. -->
+        <div class="flex flex-col gap-4">
+          <div class="bg-sky-500 aspect-[16/9] flex place-content-center items-center text-center">
+            Something
+          </div>
+          <div class="bg-sky-500 aspect-[16/9] flex place-content-center items-center text-center">
+            Something
+          </div>
+
+          <!-- Ad Rectangle -->
+          <div class="flex place-content-center">
+            <div class="bg-fuchsia-400 h-[250px] w-[300px] flex place-content-center items-center text-center">
+              <span class="center">
+                AD<br />
+                <span class="text-xs">(300*250)</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Just a block container -->
+      <!-- Ad LB -->
+      <div class="flex place-content-center">
+        <div class="bg-fuchsia-400 h-[250px] w-[994px] flex place-content-center items-center text-center">
+          <span class="center">
+            AD<br />
+            <span class="text-xs">(994*250)</span>
+          </span>
+        </div>
+      </div>
+
+
+      <!-- 3 Teaser -->
+      <div class="flex place-content-center">
+        <div class="grid grid-cols-3 gap-4 w-full max-w-6xl">
+          <div class="bg-sky-300 aspect-[3/4]">TEASER</div>
+          <div class="bg-sky-300 aspect-[3/4]">TEASER</div>
+          <div class="bg-sky-300 aspect-[3/4]">TEASER</div>
+        </div>
+      </div>
+
+      <!-- Two columns / wide teaser block (Here we show the right column as soon as md, as we have easier scaling with these teaser types) -->
+      <div class="grid w-full grid-cols-1 md:grid-cols-[1fr,300px] gap-4">
+
+        <!-- 3 Teaser -->
+        <div class="flex flex-col gap-4 place-content-start">
+          <div class="flex gap-4">
+            <div class="bg-gray-300 w-48 aspect-square">IMAGE</div>
+            <div class="bg-sky-300 w-full">TEASER</div>
+          </div>
+          <div class="flex gap-4">
+            <div class="bg-gray-300 w-48 aspect-square">IMAGE</div>
+            <div class="bg-sky-300 w-full">TEASER</div>
+          </div>
+          <div class="flex gap-4">
+            <div class="bg-gray-300 w-48 aspect-square">IMAGE</div>
+            <div class="bg-sky-300 w-full">TEASER</div>
+          </div>
+        </div>
+
+        <!-- Something else. Note that we also can use flex if we don't need a grid. -->
+        <div class="flex flex-col gap-4">
+          <div class="bg-sky-500 aspect-[16/9] flex place-content-center items-center text-center">
+            Something
+          </div>
+          <div class="bg-sky-500 aspect-[16/9] flex place-content-center items-center text-center">
+            Something
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Two columns / 3 teaser block (Here we place the ad in between the teaser on mobile) -->
+      <div class="grid w-full grid-cols-1 lg:grid-cols-[1fr,1fr,1fr,300px] gap-4">
+
+        <!-- 1 Teaser -->
+        <div class="bg-sky-300 aspect-[3/4]">TEASER</div>
+
+        <!-- Ad Rectangle -->
+        <div class="flex place-content-center lg:col-start-4">
+          <div class="bg-fuchsia-400 h-[250px] w-[300px] flex place-content-center items-center text-center">
+            <span class="center">
+              AD<br />
+              <span class="text-xs">(300*250)</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- 2 Teaser -->
+        <div class="bg-sky-300 aspect-[3/4] lg:row-start-1">TEASER</div>
+        <div class="bg-sky-300 aspect-[3/4] lg:row-start-1">TEASER</div>
+
+      </div>
+    </div>
+
+    <!-- AD -->
+    <!-- 
+    TODO: Is this needed? Could we simplify this?
+    w-150px = we need to show at least 150px of the ad. after 1300px we increase the reserved
+    space to show the whole ad. at this time the main content gets centered as well
+    it is hidden on mobile
+    the ad itself is wider than 150px and gets fully visible after the main content reached max-width
+   -->
+    <div class="hidden w-[150px] min-[1200px]:block min-[1340px]:w-[300px]">
+      <div class="bg-fuchsia-400 h-[600px] w-[300px] flex place-content-center items-center text-center">
+        <span class="center">
+          AD<br />
+          <span class="text-xs">(300*600)</span>
+        </span>
+      </div>
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>
